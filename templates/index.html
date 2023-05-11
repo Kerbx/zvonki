@@ -8,79 +8,89 @@
     <title>Звонки</title>
 </head>
 <body>
-    <div class="container">
+    <div>
         <div class="row text-center">
-            <h4>Расписание звонков</h4>
+            <h3>Расписание звонков</h3>
         </div>
-        <div class="row">
+        <div class="row text-center">
             <div class="col themed-grid-col">
+                <h4>Понедельник:</h4>
                 <form action="mon" method="post">
-                    Первая пара: <input type="time" name="1s" value="{{time['mon'][0][0]}}"> - <input type="time" name="1e" value="{{time['mon'][0][1]}}">
-                    <br>Перерыв: <input type="time" name="1p" value="{{time['mon'][0][2]}}">
-                    <br>Вторая пара: <input type="time" name="2s" value="{{time['mon'][1][0]}}"> - <input type="time" name="2e" value="{{time['mon'][1][1]}}">
-                    <br>Перерыв: <input type="time" name="1p" value="{{time['mon'][1][2]}}">
-                    <br>Третья пара: <input type="time" name="1s" value="{{time['mon'][2][0]}}"> - <input type="time" name="3e" value="{{time['mon'][2][1]}}">
-                    <br>Перерыв: <input type="time" name="1p" value="{{time['mon'][2][2]}}">
-                    <br>Четвертая пара: <input type="time" name="1s" value="{{time['mon'][3][0]}}"> - <input type="time" name="4e" value="{{time['mon'][3][1]}}">
-                    <br>Перерыв: <input type="time" name="1p" value="{{time['mon'][3][2]}}">
-                    <br>Пятая пара: <input type="time" name="1s" value="{{time['mon'][4][0]}}"> - <input type="time" name="1e" value="{{time['mon'][4][1]}}">
-                    <br>Перерыв: <input type="time" name="1p" value="{{time['mon'][4][2]}}">
+                    Первая пара: <input type="time" name="11" value="{{time['mon'][0][0]}}"> - <input type="time" name="12" value="{{time['mon'][0][1]}}">
+                    <br>Перерыв: <input type="time" name="13" value="{{time['mon'][0][2]}}">
+                    <br>Вторая пара: <input type="time" name="21" value="{{time['mon'][1][0]}}"> - <input type="time" name="22" value="{{time['mon'][1][1]}}">
+                    <br>Перерыв: <input type="time" name="23" value="{{time['mon'][1][2]}}">
+                    <br>Третья пара: <input type="time" name="31" value="{{time['mon'][2][0]}}"> - <input type="time" name="32" value="{{time['mon'][2][1]}}">
+                    <br>Перерыв: <input type="time" name="33" value="{{time['mon'][2][2]}}">
+                    <br>Четвертая пара: <input type="time" name="41" value="{{time['mon'][3][0]}}"> - <input type="time" name="42" value="{{time['mon'][3][1]}}">
+                    <br>Перерыв: <input type="time" name="43" value="{{time['mon'][3][2]}}">
+                    <br>Пятая пара: <input type="time" name="51" value="{{time['mon'][4][0]}}"> - <input type="time" name="52" value="{{time['mon'][4][1]}}">
+                    <br>Перерыв: <input type="time" name="53" value="{{time['mon'][4][2]}}">
+                    <br><br><input type="submit" onclick="this.form.submit()" value="Сохранить.">
                 </form>
             </div>
             <div class="col themed-grid-col">
+                <h4>Вторник:</h4>
                 <form action="tue" method="post">
-                    Первая пара: <input type="time" name="1s" value="{{time['tue'][0][0]}}"> - <input type="time" name="1e" value="{{time['tue'][0][1]}}">
-                    <br>Перерыв: <input type="time" name="1p" value="{{time['tue'][0][2]}}">
-                    <br>Вторая пара: <input type="time" name="2s" value="{{time['tue'][1][0]}}"> - <input type="time" name="2e" value="{{time['tue'][1][1]}}">
-                    <br>Перерыв: <input type="time" name="1p" value="{{time['tue'][1][2]}}">
-                    <br>Третья пара: <input type="time" name="1s" value="{{time['tue'][2][0]}}"> - <input type="time" name="3e" value="{{time['tue'][2][1]}}">
-                    <br>Перерыв: <input type="time" name="1p" value="{{time['tue'][2][2]}}">
-                    <br>Четвертая пара: <input type="time" name="1s" value="{{time['tue'][3][0]}}"> - <input type="time" name="4e" value="{{time['tue'][3][1]}}">
-                    <br>Перерыв: <input type="time" name="1p" value="{{time['tue'][3][2]}}">
-                    <br>Пятая пара: <input type="time" name="1s" value="{{time['tue'][4][0]}}"> - <input type="time" name="1e" value="{{time['tue'][4][1]}}">
-                    <br>Перерыв: <input type="time" name="1p" value="{{time['tue'][4][2]}}">
+                    Первая пара: <input type="time" name="11" value="{{time['tue'][0][0]}}"> - <input type="time" name="12" value="{{time['tue'][0][1]}}">
+                    <br>Перерыв: <input type="time" name="13" value="{{time['tue'][0][2]}}">
+                    <br>Вторая пара: <input type="time" name="21" value="{{time['tue'][1][0]}}"> - <input type="time" name="22" value="{{time['tue'][1][1]}}">
+                    <br>Перерыв: <input type="time" name="23" value="{{time['tue'][1][2]}}">
+                    <br>Третья пара: <input type="time" name="31" value="{{time['tue'][2][0]}}"> - <input type="time" name="32" value="{{time['tue'][2][1]}}">
+                    <br>Перерыв: <input type="time" name="3" value="{{time['tue'][2][2]}}">
+                    <br>Четвертая пара: <input type="time" name="41" value="{{time['tue'][3][0]}}"> - <input type="time" name="42" value="{{time['tue'][3][1]}}">
+                    <br>Перерыв: <input type="time" name="43" value="{{time['tue'][3][2]}}">
+                    <br>Пятая пара: <input type="time" name="51" value="{{time['tue'][4][0]}}"> - <input type="time" name="52" value="{{time['tue'][4][1]}}">
+                    <br>Перерыв: <input type="time" name="53" value="{{time['tue'][4][2]}}">
+                    <br><br><input type="submit" onclick="this.form.submit()" value="Сохранить.">
                 </form>
             </div>
             <div class="col themed-grid-col">
+                <h4>Среда:</h4>
                 <form action="wed" method="post">
-                    Первая пара: <input type="time" name="1s" value="{{time['wed'][0][0]}}"> - <input type="time" name="1e" value="{{time['wed'][0][1]}}">
-                    <br>Перерыв: <input type="time" name="1p" value="{{time['wed'][0][2]}}">
-                    <br>Вторая пара: <input type="time" name="2s" value="{{time['wed'][1][0]}}"> - <input type="time" name="2e" value="{{time['wed'][1][1]}}">
-                    <br>Перерыв: <input type="time" name="1p" value="{{time['wed'][1][2]}}">
-                    <br>Третья пара: <input type="time" name="1s" value="{{time['wed'][2][0]}}"> - <input type="time" name="3e" value="{{time['wed'][2][1]}}">
-                    <br>Перерыв: <input type="time" name="1p" value="{{time['wed'][2][2]}}">
-                    <br>Четвертая пара: <input type="time" name="1s" value="{{time['wed'][3][0]}}"> - <input type="time" name="4e" value="{{time['wed'][3][1]}}">
-                    <br>Перерыв: <input type="time" name="1p" value="{{time['wed'][3][2]}}">
-                    <br>Пятая пара: <input type="time" name="1s" value="{{time['wed'][4][0]}}"> - <input type="time" name="1e" value="{{time['wed'][4][1]}}">
-                    <br>Перерыв: <input type="time" name="1p" value="{{time['wed'][4][2]}}">
+                    Первая пара: <input type="time" name="11" value="{{time['wed'][0][0]}}"> - <input type="time" name="12" value="{{time['wed'][0][1]}}">
+                    <br>Перерыв: <input type="time" name="13" value="{{time['wed'][0][2]}}">
+                    <br>Вторая пара: <input type="time" name="21" value="{{time['wed'][1][0]}}"> - <input type="time" name="22" value="{{time['wed'][1][1]}}">
+                    <br>Перерыв: <input type="time" name="23" value="{{time['wed'][1][2]}}">
+                    <br>Третья пара: <input type="time" name="31" value="{{time['wed'][2][0]}}"> - <input type="time" name="32" value="{{time['wed'][2][1]}}">
+                    <br>Перерыв: <input type="time" name="33" value="{{time['wed'][2][2]}}">
+                    <br>Четвертая пара: <input type="time" name="41" value="{{time['wed'][3][0]}}"> - <input type="time" name="42" value="{{time['wed'][3][1]}}">
+                    <br>Перерыв: <input type="time" name="43" value="{{time['wed'][3][2]}}">
+                    <br>Пятая пара: <input type="time" name="51" value="{{time['wed'][4][0]}}"> - <input type="time" name="52" value="{{time['wed'][4][1]}}">
+                    <br>Перерыв: <input type="time" name="53" value="{{time['wed'][4][2]}}">
+                    <br><br><input type="submit" onclick="this.form.submit()" value="Сохранить.">
                 </form>
             </div>
             <div class="col themed-grid-col">
+                <h4>Четверг:</h4>
                 <form action="thu" method="post">
-                    Первая пара: <input type="time" name="1s" value="{{time['thu'][0][0]}}"> - <input type="time" name="1e" value="{{time['thu'][0][1]}}">
-                    <br>Перерыв: <input type="time" name="1p" value="{{time['thu'][0][2]}}">
-                    <br>Вторая пара: <input type="time" name="2s" value="{{time['thu'][1][0]}}"> - <input type="time" name="2e" value="{{time['thu'][1][1]}}">
-                    <br>Перерыв: <input type="time" name="1p" value="{{time['thu'][1][2]}}">
-                    <br>Третья пара: <input type="time" name="1s" value="{{time['thu'][2][0]}}"> - <input type="time" name="3e" value="{{time['thu'][2][1]}}">
-                    <br>Перерыв: <input type="time" name="1p" value="{{time['thu'][2][2]}}">
-                    <br>Четвертая пара: <input type="time" name="1s" value="{{time['thu'][3][0]}}"> - <input type="time" name="4e" value="{{time['thu'][3][1]}}">
-                    <br>Перерыв: <input type="time" name="1p" value="{{time['thu'][3][2]}}">
-                    <br>Пятая пара: <input type="time" name="1s" value="{{time['thu'][4][0]}}"> - <input type="time" name="1e" value="{{time['thu'][4][1]}}">
-                    <br>Перерыв: <input type="time" name="1p" value="{{time['thu'][4][2]}}">
+                    Первая пара: <input type="time" name="11" value="{{time['thu'][0][0]}}"> - <input type="time" name="12" value="{{time['thu'][0][1]}}">
+                    <br>Перерыв: <input type="time" name="13" value="{{time['thu'][0][2]}}">
+                    <br>Вторая пара: <input type="time" name="21" value="{{time['thu'][1][0]}}"> - <input type="time" name="22" value="{{time['thu'][1][1]}}">
+                    <br>Перерыв: <input type="time" name="23" value="{{time['thu'][1][2]}}">
+                    <br>Третья пара: <input type="time" name="31" value="{{time['thu'][2][0]}}"> - <input type="time" name="32" value="{{time['thu'][2][1]}}">
+                    <br>Перерыв: <input type="time" name="33" value="{{time['thu'][2][2]}}">
+                    <br>Четвертая пара: <input type="time" name="41" value="{{time['thu'][3][0]}}"> - <input type="time" name="42" value="{{time['thu'][3][1]}}">
+                    <br>Перерыв: <input type="time" name="43" value="{{time['thu'][3][2]}}">
+                    <br>Пятая пара: <input type="time" name="51" value="{{time['thu'][4][0]}}"> - <input type="time" name="52" value="{{time['thu'][4][1]}}">
+                    <br>Перерыв: <input type="time" name="53" value="{{time['thu'][4][2]}}">
+                    <br><br><input type="submit" onclick="this.form.submit()" value="Сохранить.">
                 </form>
             </div> 
             <div class="col themed-grid-col">
+                <h4>Пятница:</h4>
                 <form action="fri" method="post">
-                    Первая пара: <input type="time" name="1s" value="{{time['fri'][0][0]}}"> - <input type="time" name="1e" value="{{time['fri'][0][1]}}">
-                    <br>Перерыв: <input type="time" name="1p" value="{{time['fri'][0][2]}}">
-                    <br>Вторая пара: <input type="time" name="2s" value="{{time['fri'][1][0]}}"> - <input type="time" name="2e" value="{{time['fri'][1][1]}}">
-                    <br>Перерыв: <input type="time" name="1p" value="{{time['fri'][1][2]}}">
-                    <br>Третья пара: <input type="time" name="1s" value="{{time['fri'][2][0]}}"> - <input type="time" name="3e" value="{{time['fri'][2][1]}}">
-                    <br>Перерыв: <input type="time" name="1p" value="{{time['fri'][2][2]}}">
-                    <br>Четвертая пара: <input type="time" name="1s" value="{{time['fri'][3][0]}}"> - <input type="time" name="4e" value="{{time['fri'][3][1]}}">
-                    <br>Перерыв: <input type="time" name="1p" value="{{time['fri'][3][2]}}">
-                    <br>Пятая пара: <input type="time" name="1s" value="{{time['fri'][4][0]}}"> - <input type="time" name="1e" value="{{time['fri'][4][1]}}">
-                    <br>Перерыв: <input type="time" name="1p" value="{{time['fri'][4][2]}}">
+                    Первая пара: <input type="time" name="11" value="{{time['fri'][0][0]}}"> - <input type="time" name="12" value="{{time['fri'][0][1]}}">
+                    <br>Перерыв: <input type="time" name="13" value="{{time['fri'][0][2]}}">
+                    <br>Вторая пара: <input type="time" name="21" value="{{time['fri'][1][0]}}"> - <input type="time" name="22" value="{{time['fri'][1][1]}}">
+                    <br>Перерыв: <input type="time" name="23" value="{{time['fri'][1][2]}}">
+                    <br>Третья пара: <input type="time" name="31" value="{{time['fri'][2][0]}}"> - <input type="time" name="32" value="{{time['fri'][2][1]}}">
+                    <br>Перерыв: <input type="time" name="33" value="{{time['fri'][2][2]}}">
+                    <br>Четвертая пара: <input type="time" name="41" value="{{time['fri'][3][0]}}"> - <input type="time" name="42" value="{{time['fri'][3][1]}}">
+                    <br>Перерыв: <input type="time" name="43" value="{{time['fri'][3][2]}}">
+                    <br>Пятая пара: <input type="time" name="51" value="{{time['fri'][4][0]}}"> - <input type="time" name="52" value="{{time['fri'][4][1]}}">
+                    <br>Перерыв: <input type="time" name="53" value="{{time['fri'][4][2]}}">
+                    <br><br><input type="submit" onclick="this.form.submit()" value="Сохранить.">
                 </form>
             </div>
         </div>
