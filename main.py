@@ -1,10 +1,17 @@
+import auto
 import datetime
 import flask
+import rpiIO
 import settings
+import threading
 
 
 app = flask.Flask(__name__)
 setting = settings.Settings()
+controller = rpiIO.IOControl()
+timing = auto.Auto(controller=controller)
+
+thread = threading.Thread(target=timing.check, daemon=True, args=(setting.time,))
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -25,7 +32,7 @@ def mon():
 def teu():
     if flask.request.method == 'POST':
         for key in flask.request.form:
-            setting.time['teu'][int(key[0]) - 1][int(key[-1]) - 1] = flask.request.form.get(key)
+            setting.time['tue'][int(key[0]) - 1][int(key[-1]) - 1] = flask.request.form.get(key)
         setting.saveSettings()
     return flask.redirect('/')
     
@@ -65,6 +72,6 @@ def update():
     
     
 if __name__ == '__main__':
-    
+    thread.start()
     app.run(host='0.0.0.0', port=55555)
     

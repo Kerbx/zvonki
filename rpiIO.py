@@ -14,6 +14,10 @@ class IOControl:
         GPIO.output(self.ring, GPIO.HIGH)
         GPIO.output(self.alarm, GPIO.HIGH)
     
+    def __del__(self):
+        GPIO.output(self.ring, GPIO.HIGH)
+        GPIO.output(self.alarm, GPIO.HIGH)
+        
     def turnOn(self, pin):
         if pin == 'pin1':
             GPIO.output(self.ring, GPIO.LOW)

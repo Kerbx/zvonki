@@ -13,25 +13,27 @@ class Auto:
     
     def check(self, settings):
         while True:
-            if datetime.date.weekday() == 0:
-                settings = settings['mon']
-            elif datetime.date.weekday() == 1:
-                settings = settings['tue']
-            elif datetime.date.weekday() == 2:
-                settings = settings['wed']
-            elif datetime.date.weekday() == 3:
-                settings = settings['thu']
-            elif datetime.date.weekday() == 4:
-                settings = settings['fri']
-            elif datetime.date.weekday() == 5:
+            if datetime.date.weekday(datetime.date.today()) == 0:
+                setting = settings['mon']
+            elif datetime.date.weekday(datetime.date.today()) == 1:
+                setting = settings['tue']
+            elif datetime.date.weekday(datetime.date.today()) == 2:
+                setting = settings['wed']
+            elif datetime.date.weekday(datetime.date.today()) == 3:
+                setting = settings['thu']
+            elif datetime.date.weekday(datetime.date.today()) == 4:
+                setting = settings['fri']
+            elif datetime.date.weekday(datetime.date.today()) == 5:
                 continue
-            elif datetime.date.weekday() == 6:
+            elif datetime.date.weekday(datetime.date.today()) == 6:
                 continue
             
-            for i in settings:
+            for i in setting:
                 for j in i:
-                    if self.normilizeTime(j) == self.createTime():
-                        self.controller.turnOn('pin1')
-                    else:
-                        self.controller.turnOff('pin1')
+                    if j:
+                        if self.normilizeTime(j) == self.createTime():
+                            self.controller.turnOn('pin1')
+                            break
+                        else:
+                            self.controller.turnOff('pin1')
                         
