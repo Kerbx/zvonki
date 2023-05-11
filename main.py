@@ -1,5 +1,7 @@
+import datetime
 import flask
 import settings
+
 
 app = flask.Flask(__name__)
 setting = settings.Settings()
@@ -58,10 +60,11 @@ def fri():
 @app.route('/update', methods=['GET', 'POST'])
 def update():
     return flask.jsonify({
-        
+        'time': str(datetime.datetime.now())[:-11]
     })
     
     
 if __name__ == '__main__':
+    
     app.run(host='0.0.0.0', port=55555)
     
