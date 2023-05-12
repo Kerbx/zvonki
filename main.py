@@ -16,9 +16,24 @@ thread = threading.Thread(target=timing.check, daemon=True, args=(setting.time,)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    return flask.render_template('index.html', time=setting.time)
+    print(controller.getState('pin2'))
+    return flask.render_template('index.html', time=setting.time, uwuga='Включить' if controller.getState('pin2') else 'Выключить')
 
 
+@app.route('/uwuga', methods=['GET', 'POST'])
+def uwuga():
+    if flask.request.method == 'POST':
+        print(flask.request.form)
+        if flask.request.form.get('uwuga') == 'Включить':
+            print('on')
+            controller.turnOn('pin2')
+        elif flask.request.form.get('uwuga') == 'Выключить':
+            print('off')
+            controller.turnOff('pin2')
+        
+        return flask.redirect('/')
+    
+        
 @app.route('/mon', methods=['GET', 'POST'])
 def mon():
     if flask.request.method == 'POST':

@@ -26,7 +26,7 @@
                     <br>Перерыв: <input type="time" name="43" value="{{time['mon'][3][2]}}">
                     <br>Пятая пара: <input type="time" name="51" value="{{time['mon'][4][0]}}"> - <input type="time" name="52" value="{{time['mon'][4][1]}}">
                     <br>Перерыв: <input type="time" name="53" value="{{time['mon'][4][2]}}">
-                    <br><br><input type="submit" onclick="this.form.submit()" value="Сохранить.">
+                    <br><br><input type="submit" class="btn btn-success" onclick="this.form.submit()" value="Сохранить.">
                 </form>
             </div>
             <div class="col themed-grid-col">
@@ -42,7 +42,7 @@
                     <br>Перерыв: <input type="time" name="43" value="{{time['tue'][3][2]}}">
                     <br>Пятая пара: <input type="time" name="51" value="{{time['tue'][4][0]}}"> - <input type="time" name="52" value="{{time['tue'][4][1]}}">
                     <br>Перерыв: <input type="time" name="53" value="{{time['tue'][4][2]}}">
-                    <br><br><input type="submit" onclick="this.form.submit()" value="Сохранить.">
+                    <br><br><input type="submit" class="btn btn-success" onclick="this.form.submit()" value="Сохранить.">
                 </form>
             </div>
             <div class="col themed-grid-col">
@@ -58,7 +58,7 @@
                     <br>Перерыв: <input type="time" name="43" value="{{time['wed'][3][2]}}">
                     <br>Пятая пара: <input type="time" name="51" value="{{time['wed'][4][0]}}"> - <input type="time" name="52" value="{{time['wed'][4][1]}}">
                     <br>Перерыв: <input type="time" name="53" value="{{time['wed'][4][2]}}">
-                    <br><br><input type="submit" onclick="this.form.submit()" value="Сохранить.">
+                    <br><br><input type="submit" class="btn btn-success" onclick="this.form.submit()" value="Сохранить.">
                 </form>
             </div>
             <div class="col themed-grid-col">
@@ -74,7 +74,7 @@
                     <br>Перерыв: <input type="time" name="43" value="{{time['thu'][3][2]}}">
                     <br>Пятая пара: <input type="time" name="51" value="{{time['thu'][4][0]}}"> - <input type="time" name="52" value="{{time['thu'][4][1]}}">
                     <br>Перерыв: <input type="time" name="53" value="{{time['thu'][4][2]}}">
-                    <br><br><input type="submit" onclick="this.form.submit()" value="Сохранить.">
+                    <br><br><input type="submit" class="btn btn-success" onclick="this.form.submit()" value="Сохранить.">
                 </form>
             </div> 
             <div class="col themed-grid-col">
@@ -90,12 +90,16 @@
                     <br>Перерыв: <input type="time" name="43" value="{{time['fri'][3][2]}}">
                     <br>Пятая пара: <input type="time" name="51" value="{{time['fri'][4][0]}}"> - <input type="time" name="52" value="{{time['fri'][4][1]}}">
                     <br>Перерыв: <input type="time" name="53" value="{{time['fri'][4][2]}}">
-                    <br><br><input type="submit" onclick="this.form.submit()" value="Сохранить.">
+                    <br><br><input type="submit" class="btn btn-success" onclick="this.form.submit()" value="Сохранить.">
                 </form>
             </div>
         </div>
-        <div class="row mb-1 themed-grid-col">
+        <div class="row mb-1 themed-grid-col text-center">
             <h3 id="time"></h3>
+            <br><h3>Тревога:</h3>
+            <form action="uwuga" method="post">
+                <input type="submit" name="uwuga" class="btn btn-success" onclick="this.form.submit()" value="{{uwuga}}">
+            </form>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>

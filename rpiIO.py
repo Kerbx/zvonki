@@ -29,4 +29,10 @@ class IOControl:
             GPIO.output(self.ring, GPIO.HIGH)
         elif pin == 'pin2':
             GPIO.output(self.alarm, GPIO.HIGH)
+            
+    def getState(self, pin):
+        if pin == 'pin1':
+            pass
+        elif pin == 'pin2':
+            return GPIO.input(self.alarm)
     
